@@ -96,6 +96,7 @@ index &lt;- which.max(d$steps)</code></pre>
 <ul>
 <li>Total number of missing values in the dataset is <strong>2304</strong></li>
 </ul>
+<p>Filling the missing steps values by assigning the average for similar intervals.</p>
 <pre class="r"><code>fixed &lt;- data
 fixedNA &lt;- is.na(fixed$steps)
 fixed[fixedNA, 1] &lt;- sapply(fixed[fixedNA, 3], function(x) dinterval[dinterval$interval == x, 2])

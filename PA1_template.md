@@ -63,6 +63,7 @@ numberOfNA <- nrow(data[is.na(data$steps),])
 
 - Total number of missing values in the dataset is **2304**
 
+Filling the  missing steps values by assigning the average for similar intervals.
 
 ```r
 fixed <- data
